@@ -1,0 +1,10 @@
+.story {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+}
+.word {
+    font-family: Caveat, cursive;
+    font-size: 1.8rem;
+    text-decoration: underline;
+}
