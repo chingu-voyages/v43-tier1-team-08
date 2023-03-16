@@ -26,6 +26,6 @@ These could be design files, peer examples, code snippets, screenshots, etc.
 
 Does this block or contribute to any existing issues?
 
-**__Additional Considerations__**
-Include anything else that may be helpful. For example, links to external resources.
+### Additional Considerations
 
+Include anything else that may be helpful. For example, links to external resources.
