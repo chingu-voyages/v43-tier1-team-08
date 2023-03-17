@@ -12,17 +12,84 @@
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
     </head>
     <body>
-        <section class="story">
-            <p>Once there was a strange time where a <span class="word">${word01}</span> took over the world
-             and made us all stay span <span class="word">${word02}</span> at home.  So we 
-             <span class="word">${word03}</span> into our imagination and found out the key to 
-             <span class="word">${word04}</span> was all about wearing <span class="word">${word05}</span> 
-             with <span class="word">${word06}</span>.  It turned out that this was also the trick to turning 
-             on our <span class="word">${word07}</span> and getting to do everything you love all at once.  
-             Now, we can eat <span class="word">${word08}</span> while playing <span class="word">${word09}</span>, 
-             or search for <span class="word">${word10}</span> while singing <span class="word">${word11}</span>.  
-             One time, we even turned <span class="word">${word12}</span> into a <span class="word">${word13}</span>.  
-             Don’t believe us?  Just say <span class="word">" ${word14} "</span> and we’ll show you.</p>
-        </section>
+        <div class="container">
+            <section class="word-form">
+                <form action="#">
+                    <div class="form-control">
+                        <label for="creature">Creature : </label>
+                        <input type="text" id="creature" name="creature" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Adjective : </label>
+                        <input type="text" id="adjective" name="adjective" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Verb ending in “ed” : </label>
+                        <input type="text" id="verb" name="verb" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Feeling : </label>
+                        <input type="text" id="feeling" name="feeling" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Type of Clothing : </label>
+                        <input type="text" id="clothing" name="clothing" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Something Sparkly : </label>
+                        <input type="text" id="sparkly" name="sparkly" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Superpower : </label>
+                        <input type="text" id="superpower" name="superpower" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Favorite Food : </label>
+                        <input type="text" id="food" name="food" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Favorite Game : </label>
+                        <input type="text" id="game" name="game" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Animal : </label>
+                        <input type="text" id="animal" name="animal" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Favorite Song : </label>
+                        <input type="text" id="song" name="song" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Room in House : </label>
+                        <input type="text" id="room" name="room" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Favorite Place to Go : </label>
+                        <input type="text" id="place" name="place" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Secret Password : </label>
+                        <input type="text" id="password" name="password" placeholder="">
+                    </div>
+                    <div class="buttons">
+                        <button type="submit">Reset</button>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="story">
+                <p>Once there was a strange time where a <span class="word">${word01}</span> took over the world
+                and made us all stay span <span class="word">${word02}</span> at home.  So we 
+                <span class="word">${word03}</span> into our imagination and found out the key to 
+                <span class="word">${word04}</span> was all about wearing <span class="word">${word05}</span> 
+                with <span class="word">${word06}</span>.  It turned out that this was also the trick to turning 
+                on our <span class="word">${word07}</span> and getting to do everything you love all at once.  
+                Now, we can eat <span class="word">${word08}</span> while playing <span class="word">${word09}</span>, 
+                or search for <span class="word">${word10}</span> while singing <span class="word">${word11}</span>.  
+                One time, we even turned <span class="word">${word12}</span> into a <span class="word">${word13}</span>.  
+                Don’t believe us?  Just say <span class="word">" ${word14} "</span> and we’ll show you.</p>
+            </section>
+        </div>
     </body>
 </html>
