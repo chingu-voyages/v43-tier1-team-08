@@ -1,3 +1,10 @@
+
+.body{
+    width: 1440px;
+    height: 617px;
+    left: 0px;
+    top: 407px;
+}
 .story {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2rem;
@@ -7,4 +14,62 @@
     font-family: Caveat, cursive;
     font-size: 1.8rem;
     text-decoration: underline;
+}
+.container{
+    display: flex;
+    background-color: #fff;
+    margin: 50px auto;
+    padding: 30px 20px;
+    width: 90%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.word-form {
+    background: #D9D9D9;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    padding: 10px;
+    margin-right: 40px;
+}
+.form-control{
+    padding: 3px;
+    height: 35px;
+}
+.form-control label{
+    font-size: 1.2rem;
+    float: left;
+    padding-left: 10px;
+}
+.form-control input {
+    box-sizing: border-box;
+    float: right;
+    width: 233px;
+    height: 35px;
+    left: 290px;
+    top: 314px;
+    background: #FBFBFB;
+    border: 1px solid #000000;
+    border-radius: 3px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 25px;
+    width: 443px;
+    height: 55px;
+    left: 107px;
+    top: 485px;
+    border-radius: 2px;
+    padding: 8px;
+}
+button{
+    width: 209px;
+    height: 55px;
+    background: #D9D9D9;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
