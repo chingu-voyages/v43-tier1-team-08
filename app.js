@@ -4,20 +4,20 @@ const story = document.querySelector(".story");
 wordForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    let word01 = document.getElementById("word01");
-    let word02 = document.getElementById("word02");
-    let word03 = document.getElementById("word03");
-    let word04 = document.getElementById("word04");
-    let word05 = document.getElementById("word05");
-    let word06 = document.getElementById("word06");
-    let word07 = document.getElementById("word07");
-    let word08 = document.getElementById("word08");
-    let word09 = document.getElementById("word09");
-    let word10 = document.getElementById("word10");
-    let word11 = document.getElementById("word11");
-    let word12 = document.getElementById("word12");
-    let word13 = document.getElementById("word13");
-    let word14 = document.getElementById("word14");
+    let creature = document.getElementById("creature").value;
+    let adjective = document.getElementById("adjective").value;
+    let verb = document.getElementById("verb").value;
+    let feeling = document.getElementById("feeling").value;
+    let clothing = document.getElementById("clothing").value;
+    let sparkly = document.getElementById("sparkly").value;
+    let superpower = document.getElementById("superpower").value;
+    let food = document.getElementById("food").value;
+    let game = document.getElementById("game").value;
+    let animal = document.getElementById("animal").value;
+    let song = document.getElementById("song").value;
+    let room = document.getElementById("room").value;
+    let place = document.getElementById("place").value;
+    let password = document.getElementById("password").value;
     
     let storyText = `Once there was a strange time where a <span class="word">${word01}</span> took over the world
     and made us all stay span <span class="word">${word02}</span> at home.  So we 
