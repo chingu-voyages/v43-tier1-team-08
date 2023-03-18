@@ -1,9 +1,13 @@
+// constants to reference html elements used in functions
 const wordForm = document.querySelector("form");
 const story = document.querySelector(".story");
 
+// have the form listen for the submit event
 wordForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    // place the user-entered words into variables with the
+    // same name as the form input ids
     let creature = document.getElementById("creature").value;
     let adjective = document.getElementById("adjective").value;
     let verb = document.getElementById("verb").value;
@@ -19,6 +23,7 @@ wordForm.addEventListener("submit", (e) => {
     let place = document.getElementById("place").value;
     let password = document.getElementById("password").value;
     
+    // create the text of the story to be added to the landing page
     let storyText = `Once there was a strange time where a <span class="word">${creature}</span> took over the world
     and made us all stay <span class="word">${adjective}</span> at home.  So we 
     <span class="word">${verb}</span> into our imagination and found out the key to 
@@ -30,5 +35,6 @@ wordForm.addEventListener("submit", (e) => {
     One time, we even turned the <span class="word">${room}</span> into <span class="word">${place}</span>.  
     Don’t believe us?  Just say <span class="word">" ${password} "</span> and we’ll show you.`;
   
+    // place the story into the landing page
     story.innerHTML = storyText;
 });
