@@ -1,4 +1,4 @@
-const wordForm = document.querySelector(".word-form");
+const wordForm = document.querySelector("form");
 const story = document.querySelector(".story");
 
 wordForm.addEventListener("submit", (e) => {
