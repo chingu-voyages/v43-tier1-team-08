@@ -24,7 +24,7 @@ wordForm.addEventListener("submit", (e) => {
     let password = document.getElementById("password").value;
     
     // create the text of the story to be added to the landing page
-    let storyText = `Once there was a strange time where a <span class="word">${creature}</span> took over the world
+    let storyHTML = `Once there was a strange time where a <span class="word">${creature}</span> took over the world
     and made us all stay <span class="word">${adjective}</span> at home.  So we 
     <span class="word">${verb}</span> into our imagination and found out the key to 
     <span class="word">${feeling}</span> was all about wearing <span class="word">${clothing}</span> 
@@ -36,5 +36,5 @@ wordForm.addEventListener("submit", (e) => {
     Don’t believe us?  Just say <span class="word">" ${password} "</span> and we’ll show you.`;
   
     // place the story into the landing page
-    story.innerHTML = storyText;
+    story.innerHTML = storyHTML;
 });
