@@ -30,5 +30,5 @@ wordForm.addEventListener("submit", (e) => {
     One time, we even turned the <span class="word">${room}</span> into <span class="word">${place}</span>.  
     Don’t believe us?  Just say <span class="word">" ${password} "</span> and we’ll show you.`;
   
-    story.textContent = storyText;
+    story.innerHTML = storyText;
 });
