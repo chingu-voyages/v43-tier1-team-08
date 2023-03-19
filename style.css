@@ -5,10 +5,29 @@
     left: 0px;
     top: 407px;
 }
+.flex-container{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 25%;
+}
+.game-title{
+    margin-left: 35%;
+}
+.story-title1{
+    font-size: larger;
+    margin-top: 10%;
+    margin-left: 39%;
+    background-color: rgb(80, 231, 168);
+    background-size: 5px;
+}
 .story {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2rem;
     line-height: 2.2rem;
+    background-color: #D9D9D9;
 }
 .word {
     font-family: Caveat, cursive;
@@ -66,10 +85,13 @@
 button{
     width: 209px;
     height: 55px;
-    background: #D9D9D9;
+    background: #328EFA;
     border-radius: 15px;
     font-size: 1.2rem;
     flex: none;
     order: 0;
     flex-grow: 0;
+}
+.footer{
+    align-self: end;
 }
