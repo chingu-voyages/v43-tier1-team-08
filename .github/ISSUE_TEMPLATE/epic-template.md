@@ -1,19 +1,31 @@
 ---
 name: Epic template
-about: An epic represents functionality that will span multiple sprints
-title: ''
+about: Create a standard ticket for something that needs to get done
+title: 'Ticket: Short description of the feature/chore/fix/style'
 labels: epic
 assignees: ''
 
 ---
 
-**__Feature Description__**
-Describe what the feature is intended to accomplish & why it's important
+## Acceptance Criteria
 
-**__Major User Stories/tasks__**
-- [ ] User Story or Task  #1
-- [ ] User Story or Task #2
-- [ ] Additional User Stories or Tasks as necessary
+Please explain the minimum viable requirements. Use a list of empty checkboxes (that can be copied and completed in the resulting PR) if you like:
 
-**__Additional Considerations__**
+- [ ] As a user I must be able too...
+- [ ] As a developer I must be able too...
+- [ ] As a tester I must be able too...
+
+<br />
+<br />
+
+### Helpful links or media?
+
+These could be design files, peer examples, code snippets, screenshots, etc.
+
+### Related issues?
+
+Does this block or contribute to any existing issues?
+
+### Additional Considerations
+
 Include anything else that may be helpful. For example, links to external resources.
