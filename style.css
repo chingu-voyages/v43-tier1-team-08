@@ -1,11 +1,15 @@
-
+*{
+    /* border: 1px solid #f30505; */
+}
 body{
     width: 100vw;
     margin: 0; 
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    /* overflow-y: hidden; */
 }
 .flex-container{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -27,6 +31,7 @@ body{
     font-size: 1.2rem;
     line-height: 2.2rem;
     background-color: #D9D9D9;
+    display: none;
 }
 .word {
     font-family: Caveat, cursive;
@@ -34,26 +39,36 @@ body{
     text-decoration: underline;
 }
 .container{
-    display: flex;
-    background-color: #fff;
-    margin: 50px auto;
-    padding: 30px 20px;
-    width: 90%;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-.word-form {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* background-color: #fff; */
     background: #D9D9D9;
-    border: 1px solid #000000;
+
+    margin: 30px auto;
+    padding: 30px 20px;
+    width: 70%;
+    overflow-y: auto;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.50));
+}
+form {
+     display: flex;
+     /* flex-direction: row; */
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    /*border: 1px solid #000000;
     border-radius: 16px;
     padding: 10px;
-    margin-right: 40px;
+    margin-right: 40px; */
 }
 .form-control{
-    padding: 3px;
-    height: 35px;
+        /* padding: 2px; */
+        height: 35px;
+        width: 40%;
 }
 .form-control label{
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     float: left;
     padding-left: 10px;
 }
@@ -61,7 +76,7 @@ body{
     box-sizing: border-box;
     float: right;
     width: 233px;
-    height: 35px;
+    height: 30px;
     background: #FBFBFB;
     border: 1px solid #000000;
     border-radius: 3px;
@@ -73,7 +88,7 @@ body{
     gap: 25px;
     width: 443px;
     height: 55px;
-    padding: 8px;
+    padding-top: 20px;
 }
 button{
     width: 209px;
