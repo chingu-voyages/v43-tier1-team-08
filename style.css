@@ -1,9 +1,8 @@
 
-.body{
-    width: 1440px;
-    height: 617px;
-    left: 0px;
-    top: 407px;
+body{
+    width: 100vw;
+    margin: 0; 
+    box-sizing: border-box;
 }
 .flex-container{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -63,8 +62,6 @@
     float: right;
     width: 233px;
     height: 35px;
-    left: 290px;
-    top: 314px;
     background: #FBFBFB;
     border: 1px solid #000000;
     border-radius: 3px;
@@ -73,13 +70,9 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px;
     gap: 25px;
     width: 443px;
     height: 55px;
-    left: 107px;
-    top: 485px;
-    border-radius: 2px;
     padding: 8px;
 }
 button{
@@ -88,9 +81,6 @@ button{
     background: #328EFA;
     border-radius: 15px;
     font-size: 1.2rem;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 }
 .footer{
     align-self: end;
