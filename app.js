@@ -59,5 +59,6 @@ form.addEventListener("submit", (e) => {
         }
     }
 
+    // set story
     story.innerHTML = storyHTML;
 });
