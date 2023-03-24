@@ -1,6 +1,7 @@
-// constants to reference html elements used in functions
-const wordForm = document.querySelector("form");
-const story = document.querySelector(".story");
+// DOM element constants
+const storyTitle = document.querySelector(".story-title");
+const form = document.querySelector("form");
+const story = document.querySelector(".story")
 
 // have the form listen for the submit event
 wordForm.addEventListener("submit", (e) => {
