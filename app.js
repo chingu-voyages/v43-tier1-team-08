@@ -21,5 +21,8 @@ let titleHTML = "";
 let formHTML = "";
 let storyHTML = "";
 
+// set title
+storyTitle.innerHTML = parsed.title;
+
     story.innerHTML = storyHTML;
 });
