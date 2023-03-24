@@ -38,6 +38,9 @@ let storyHTML = "";
         <button type="submit">Submit</button>
     </div>`;
 
+// set form
+form.innerHTML = formHTML;
+
 
     story.innerHTML = storyHTML;
 });
