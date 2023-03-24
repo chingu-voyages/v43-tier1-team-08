@@ -41,6 +41,10 @@ let storyHTML = "";
 // set form
 form.innerHTML = formHTML;
 
+// when form is submitted, 
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
 
     story.innerHTML = storyHTML;
 });
