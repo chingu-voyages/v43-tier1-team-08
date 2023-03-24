@@ -16,8 +16,10 @@ let labels = parsed.labels;
 let ids = parsed.inputIDs;
 let storyPieces = parsed.storyPieces;
 
-// create empty html variables for DOM elements
-let titleHTML = "";
+// set title
+storyTitle.innerHTML = title;
+
+// create empty html variables for form and story
 let formHTML = "";
 let storyHTML = "";
 
