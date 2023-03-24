@@ -45,6 +45,12 @@ form.innerHTML = formHTML;
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    // gather user-entered words
+    let words = [];
+    for (i in ids) {
+        words[i] = document.getElementById(ids[i]).value;
+    }
+
 
     story.innerHTML = storyHTML;
 });
