@@ -23,8 +23,21 @@ storyTitle.innerHTML = title;
 let formHTML = "";
 let storyHTML = "";
 
-// set title
-storyTitle.innerHTML = parsed.title;
+// create form html
+    // create labels and inputs
+    for (i in labels) {
+    formHTML += `
+        <div class="form-control">
+        <label for="${ids[i]}">${labels[i]} : </label>
+        <input type="text" id="${ids[i]}" name="${ids[i]}">`
+    }
+    // create reset and submit buttons
+    formHTML += `
+    <div class="buttons">
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </div>`;
+
 
     story.innerHTML = storyHTML;
 });
