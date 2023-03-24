@@ -1,12 +1,26 @@
 <!DOCTYPE html> 
-<html>            
+<html>     
+<link rel="stylesheet" href="home.css">       
      <head>
-       <title>Website</title>
+       <title>MAD-LIB Homepage</title>
+       <p class= homepage-logo> MAD☻LIBS </p>
      </head>
 
      <body>
-       <h1> Welcome </h1>
-       <p> to page 2 </p>
-       <a href="second.html">PLAY!</a>
+        <div class="flex-menu">
+            <div>
+                <!-- PLAY BUTTON NEEDS JS FUNCTIONALITY TO LEAD TO STORY1 -->
+                <button class="button1" onclick="document.location='second.html'">Play!</button>
+            </div>
+            <div>
+                <!-- INSTRUCTIONS BUTTON NEEDS EITHER A MODAL OR CARD DISPLAY ITEM -->
+                <button class="button2" onclick="alert('placeholder')">Instructions!</button>
+            </div>
+            <div>
+                <button class="button3" onclick='window.location.href= "https://github.com/chingu-voyages/v43-tier1-team-08"'>Meet The Team!</button>
+            </div>
+            
+        </div>
+       
      </body>            
  </html>
