@@ -28,9 +28,11 @@ let storyHTML = "";
     for (i in labels) {
     formHTML += `
         <div class="form-control">
-        <label for="${ids[i]}">${labels[i]} : </label>
-        <input type="text" id="${ids[i]}" name="${ids[i]}">`
+            <label for="${ids[i]}">${labels[i]} : </label>
+            <input type="text" id="${ids[i]}" name="${ids[i]}">
+        </div>`
     }
+    
     // create reset and submit buttons
     formHTML += `
     <div class="buttons">
