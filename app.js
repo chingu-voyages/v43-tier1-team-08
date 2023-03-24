@@ -8,6 +8,8 @@ const story = document.querySelector(".story")
 // ids, and an array holding the story pieces
 let json = '{"title": "The Brady Bunch","labels": ["Adjective","Singular noun","Number","Adjective","Plural of the above noun","Plural body part","Color","Plural Noun"],"inputIDs": ["adjective","singular-noun","number", "adjective-2", "plural-noun", "body-part", "color", "plural-noun-2"],"storyPieces": ["Here\'s the story of a "," ", " who was bringing up "," very ", " ", ".  All of them had ", " of ", " like their mother, the youngest one had ","."]}';
 
+// convert json object into javascript object
+let parsed = JSON.parse(json);
   
     // place the story into the landing page
     story.innerHTML = storyHTML;
