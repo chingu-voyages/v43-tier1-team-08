@@ -51,6 +51,13 @@ form.addEventListener("submit", (e) => {
         words[i] = document.getElementById(ids[i]).value;
     }
 
+    // create story
+    for (i in storyPieces) {
+        storyHTML += storyPieces[i];
+        if (i < words.length) {
+        storyHTML += words[i];
+        }
+    }
 
     story.innerHTML = storyHTML;
 });
