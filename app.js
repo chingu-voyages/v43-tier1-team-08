@@ -5,6 +5,7 @@ const story = document.querySelector(".story");
 // have the form listen for the submit event
 wordForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    wordForm.classList.add('story');
 
     // place the user-entered words into variables with the
     // same name as the form input ids
@@ -37,4 +38,16 @@ wordForm.addEventListener("submit", (e) => {
   
     // place the story into the landing page
     story.innerHTML = storyHTML;
+    story.classList.remove('story');
+
+    //creates button to go back to the form
+    let resetButton = `<br><button id="game-reset" onclick="resetGame()">Play Again</button>`;
+    story.innerHTML += resetButton;
 });
+
+function resetGame() {
+    story.classList.add('story');
+    story.innerHTML = '';
+    wordForm.reset();
+    wordForm.classList.remove('story');
+}
