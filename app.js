@@ -1,18 +1,12 @@
 // constants to reference html elements used in functions
-// const inputForm = document.querySelector('.input-form');
 const wordForm = document.querySelector("form");
 const story = document.querySelector(".story");
-// console.log(wordForm.classList.value);
-// console.log(story.classList.value);
 
 // have the form listen for the submit event
 wordForm.addEventListener("submit", (e) => {
     e.preventDefault();
     wordForm.classList.add('story');
-//     console.log(wordForm.classList.value);
-//  console.log(story.classList.value);
 
-    // console.log(container);
     // place the user-entered words into variables with the
     // same name as the form input ids
     let creature = document.getElementById("creature").value;
@@ -45,11 +39,10 @@ wordForm.addEventListener("submit", (e) => {
     // place the story into the landing page
     story.innerHTML = storyHTML;
     story.classList.remove('story');
+
+    //creates button to go back to the form
     let resetButton = `<br><button id="game-reset" onclick="resetGame()">Play Again</button>`;
     story.innerHTML += resetButton;
-    // console.log(wordForm.classList.value);
-    // console.log(story.classList.value);
-
 });
 
 function resetGame() {
