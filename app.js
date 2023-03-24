@@ -4,7 +4,6 @@ const storyTitle = document.querySelector(".story-title1");
 const form = document.querySelector("form");
 const story = document.querySelector(".story")
 
-
 // fetch story data from data.json file
 fetch("./data/data.json")
     .then((response) => response.json())
@@ -16,7 +15,6 @@ fetch("./data/data.json")
         let {title} = arrayOfStoryOjects[i];
         storyTitles.push(title);
     }
-    console.log(storyTitles);
     
     // create story title buttons
     let storyButtonsHTML = "";
@@ -28,14 +26,12 @@ fetch("./data/data.json")
 
     // add eventListener to story title button class
     storyButtons.addEventListener("click", e => {
+
+        // get chosen story number
         let storyNumber = Number(e.target.id.slice(13));
-        console.log(storyNumber)
 
         // run through process for chosen story
-        console.log(arrayOfStoryOjects[storyNumber])
-
         const {title, labels, inputIds, storyPieces} = arrayOfStoryOjects[storyNumber];
-        console.log(title)
 
         // add title to DOM
         storyTitle.innerHTML = title;
