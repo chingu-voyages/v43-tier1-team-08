@@ -40,8 +40,9 @@ function createFormHTML(data) {
     return html;
 }
 
-// set form
-form.innerHTML = formHTML;
+function addFormToDOM(formHTML) {
+    form.innerHTML = formHTML;
+}
 
 // when form is submitted, 
 form.addEventListener("submit", (e) => {
