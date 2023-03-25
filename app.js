@@ -30,7 +30,7 @@ function process(data) {
         </div>`;
 
     // add form to DOM
-    form.innerHTML = formHTML;
+    form.innerHTML = html;
 
     // gather user-entered words,
     // create story html, and
