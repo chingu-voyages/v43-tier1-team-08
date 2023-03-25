@@ -3,6 +3,15 @@ const storyTitle = document.querySelector(".story-title1");
 const form = document.querySelector("form");
 const story = document.querySelector(".story")
 
+// fetch story data from data.json file and process with process() function
+fetch("./data/data.json")
+  .then((response) => response.json())
+  .then((data) => process(data));
+
+
+
+
+
 // break object into sections
 let title = parsed.title;
 let labels = parsed.labels;
