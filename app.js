@@ -61,6 +61,9 @@ function gatherStoryBlanksFromForm(data) {
 }
 
 
+/*
+
+
     // create story
     for (i in storyPieces) {
         storyHTML += storyPieces[i];
@@ -72,3 +75,5 @@ function gatherStoryBlanksFromForm(data) {
     // set story
     story.innerHTML = storyHTML;
 });
+
+*/
