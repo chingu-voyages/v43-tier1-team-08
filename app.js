@@ -9,15 +9,6 @@ fetch("./data/data.json")
   .then((data) => process(data));
 
 
-
-
-
-// break object into sections
-let title = parsed.title;
-let labels = parsed.labels;
-let ids = parsed.inputIDs;
-let storyPieces = parsed.storyPieces;
-
 // set title
 storyTitle.innerHTML = title;
 
