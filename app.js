@@ -9,19 +9,10 @@ fetch("./data/data.json")
   .then((data) => process(data));
 
 function process(data) {
-    addTitleToDOM(data);
-    let formHTML = createFormHTML(data);
-    addFormToDOM(formHTML);
-    let storyBlanks = gatherStoryBlanksFromForm(data);
-    let storyHTML = createStory(data, storyBlanks);
-    addStoryToDOM(storyHTML);
-}
-
-function addTitleToDOM(data) {
+    // add title to DOM
     storyTitle.innerHTML = data.title;
-}
 
-function createFormHTML(data) {
+    // create form
     let html = "";
     // create labels and inputs
     for (i in data.labels) {
@@ -37,28 +28,25 @@ function createFormHTML(data) {
             <button type="reset">Reset</button>
             <button type="submit">Submit</button>
         </div>`;
-    return html;
-}
 
-function addFormToDOM(formHTML) {
+    // add form to DOM
     form.innerHTML = formHTML;
-}
 
-function gatherStoryBlanksFromForm(data) {
-    let blanksArray = form.addEventListener("submit", (e) => {
+    // gather user-entered words,
+    // create story html, and
+    // add story to DOM
+    // inside the submit button handler
+    form.addEventListener("submit", (e) => {
         e.preventDefault();
-    
         // gather user-entered words
         let blanks = [];
         for (i in data.inputIds) {
             blanks[i] = document.getElementById(data.inputIds[i]).value;
         }
-        console.log(blanks)
-        return blanks;
+
     });
-    console.log(blanksArray);
-    return blanksArray;
 }
+
 
 
 /*
