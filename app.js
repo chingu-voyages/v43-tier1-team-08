@@ -8,6 +8,9 @@ fetch("./data/data.json")
   .then((response) => response.json())
   .then((data) => process(data));
 
+function process(data) {
+
+}
 
 // set title
 storyTitle.innerHTML = title;
