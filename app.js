@@ -9,7 +9,12 @@ fetch("./data/data.json")
   .then((data) => process(data));
 
 function process(data) {
-
+    addTitleToDOM(data);
+    let formHTML = createFormHTML(data);
+    addFormToDOM(formHTML);
+    let storyBlanks = gatherStoryBlanksFromForm();
+    let storyHTML = createStory(data, storyBlanks);
+    addStoryToDOM(storyHTML);
 }
 
 // set title
