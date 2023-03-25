@@ -39,29 +39,19 @@ function process(data) {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         // gather user-entered words
-        let blanks = [];
+        let words = [];
         for (i in data.inputIds) {
-            blanks[i] = document.getElementById(data.inputIds[i]).value;
+            words[i] = document.getElementById(data.inputIds[i]).value;
         }
-
+        // create story html
+        let html = "";
+        for (i in data.storyPieces) {
+            html += data.storyPieces[i];
+            if (i < words.length) {
+            html += words[i];
+            }
+        }
+        // set story
+        story.innerHTML = html;
     });
 }
-
-
-
-/*
-
-
-    // create story
-    for (i in storyPieces) {
-        storyHTML += storyPieces[i];
-        if (i < words.length) {
-        storyHTML += words[i];
-        }
-    }
-
-    // set story
-    story.innerHTML = storyHTML;
-});
-
-*/
