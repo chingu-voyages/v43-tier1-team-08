@@ -17,8 +17,9 @@ function process(data) {
     addStoryToDOM(storyHTML);
 }
 
-// set title
-storyTitle.innerHTML = title;
+function addTitleToDOM(data) {
+    storyTitle.innerHTML = data.title;
+}
 
 // create empty html variables for form and story
 let formHTML = "";
