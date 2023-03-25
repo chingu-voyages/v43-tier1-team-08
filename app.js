@@ -12,7 +12,7 @@ function process(data) {
     addTitleToDOM(data);
     let formHTML = createFormHTML(data);
     addFormToDOM(formHTML);
-    let storyBlanks = gatherStoryBlanksFromForm();
+    let storyBlanks = gatherStoryBlanksFromForm(data);
     let storyHTML = createStory(data, storyBlanks);
     addStoryToDOM(storyHTML);
 }
@@ -44,15 +44,22 @@ function addFormToDOM(formHTML) {
     form.innerHTML = formHTML;
 }
 
-// when form is submitted, 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
+function gatherStoryBlanksFromForm(data) {
+    let blanksArray = form.addEventListener("submit", (e) => {
+        e.preventDefault();
+    
+        // gather user-entered words
+        let blanks = [];
+        for (i in data.inputIds) {
+            blanks[i] = document.getElementById(data.inputIds[i]).value;
+        }
+        console.log(blanks)
+        return blanks;
+    });
+    console.log(blanksArray);
+    return blanksArray;
+}
 
-    // gather user-entered words
-    let words = [];
-    for (i in ids) {
-        words[i] = document.getElementById(ids[i]).value;
-    }
 
     // create story
     for (i in storyPieces) {
