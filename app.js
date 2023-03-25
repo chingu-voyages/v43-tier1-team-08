@@ -3,9 +3,6 @@ const storyTitle = document.querySelector(".story-title1");
 const form = document.querySelector("form");
 const story = document.querySelector(".story")
 
-// convert json object into javascript object
-let parsed = JSON.parse(json);
-
 // break object into sections
 let title = parsed.title;
 let labels = parsed.labels;
