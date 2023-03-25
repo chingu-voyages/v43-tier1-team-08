@@ -21,26 +21,24 @@ function addTitleToDOM(data) {
     storyTitle.innerHTML = data.title;
 }
 
-// create empty html variables for form and story
-let formHTML = "";
-let storyHTML = "";
-
-// create form html
+function createFormHTML(data) {
+    let html = "";
     // create labels and inputs
-    for (i in labels) {
-    formHTML += `
-        <div class="form-control">
-            <label for="${ids[i]}">${labels[i]} : </label>
-            <input type="text" id="${ids[i]}" name="${ids[i]}">
-        </div>`
+    for (i in data.labels) {
+        html += `
+            <div class="form-control">
+                <label for="${data.inputIds[i]}">${data.labels[i]} : </label>
+                <input type="text" id="${data.inputIds[i]}" name="${data.inputIds[i]}">
+            </div>`
     }
-    
     // create reset and submit buttons
-    formHTML += `
-    <div class="buttons">
-        <button type="reset">Reset</button>
-        <button type="submit">Submit</button>
-    </div>`;
+    html += `
+        <div class="buttons">
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </div>`;
+    return html;
+}
 
 // set form
 form.innerHTML = formHTML;
