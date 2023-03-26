@@ -9,3 +9,4 @@ This project was created for Chingu's Voyage 43 starting in March 2023.  Users c
 
 ## Dependencies
   * Vanilla CSS
+  * bad_words 3.0.4
