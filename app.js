@@ -1,4 +1,5 @@
 // DOM element constants
+const storyButtons = document.querySelector(".story-buttons");
 const storyTitle = document.querySelector(".story-title1");
 const form = document.querySelector("form");
 const story = document.querySelector(".story")
