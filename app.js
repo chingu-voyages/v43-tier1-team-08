@@ -26,9 +26,10 @@ fetch("./data/data.json")
     }
     storyButtons.innerHTML = storyButtonsHTML;
 
-function process(data) {
-    // add title to DOM
-    storyTitle.innerHTML = data.title;
+    // add eventListener to story title button class
+    storyButtons.addEventListener("click", e => {
+        let storyNumber = Number(e.target.id.slice(13));
+        console.log(storyNumber)
 
     // create form
     let html = "";
