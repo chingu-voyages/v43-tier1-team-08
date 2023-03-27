@@ -1,6 +1,7 @@
 // DOM element constants
 const storyButtons = document.querySelector(".story-buttons");
 const storyTitle = document.querySelector(".story-title1");
+const wordform = document.querySelector(".word-form");
 const form = document.querySelector("form");
 const story = document.querySelector(".story")
 
@@ -27,7 +28,7 @@ fetch("./data/data.json")
     // add eventListener to story title button class
     storyButtons.addEventListener("click", e => {
 
-        // get chosen story number
+        // get number of story chosen
         let storyNumber = Number(e.target.id.slice(13));
 
         // run through process for chosen story
@@ -42,9 +43,14 @@ fetch("./data/data.json")
         for (i in labels) {
             html += `
                 <div class="form-control">
-                    <label for="${inputIds[i]}">${labels[i]} : </label>
+                    <label for="${inputIds[i]}">${labels[i]}: </label>
                     <input type="text" id="${inputIds[i]}" name="${inputIds[i]}">
                 </div>`
+        }
+        // add space if there are an odd number of inputs
+        if (labels.length % 2 == 1) {
+            html += `
+                <div class="form-control"></div>`
         }
         // create reset and submit buttons
         html += `
@@ -55,6 +61,7 @@ fetch("./data/data.json")
 
         // add form to DOM
         form.innerHTML = html;
+        wordform.classList.remove("hidden");
 
         // gather user-entered words,
         // create story html, and
@@ -75,6 +82,12 @@ fetch("./data/data.json")
                 html += words[i];
                 }
             }
+            //creates button to go back to the form
+            let resetButton = `<br><button id="game-reset" onclick="resetGame()">Play Again</button>`;
+            html += resetButton;
+            // hide form
+            wordform.classList.add('hidden');
+
             // set story
             story.innerHTML = html;
         }); /* end of form eventListener */
