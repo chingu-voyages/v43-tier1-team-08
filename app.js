@@ -3,10 +3,12 @@ const storyTitle = document.querySelector(".story-title1");
 const form = document.querySelector("form");
 const story = document.querySelector(".story")
 
-// fetch story data from data.json file and process with process() function
+
+// fetch story data from data.json file
 fetch("./data/data.json")
-  .then((response) => response.json())
-  .then((data) => process(data));
+    .then((response) => response.json())
+    .then((arrayOfStoryOjects) => {
+
 
 function process(data) {
     // add title to DOM
