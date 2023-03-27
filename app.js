@@ -46,6 +46,7 @@ form.innerHTML = formHTML;
 // when form is submitted, 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
+    wordForm.classList.add('hidden');
 
     // gather user-entered words
     let words = [];
@@ -63,4 +64,16 @@ form.addEventListener("submit", (e) => {
 
     // set story
     story.innerHTML = storyHTML;
+    story.classList.remove('hidden');
+
+    //creates button to go back to the form
+    let resetButton = `<br><button id="game-reset" onclick="resetGame()">Play Again</button>`;
+    story.innerHTML += resetButton;
 });
+
+function resetGame() {
+    story.classList.add('hidden');
+    story.innerHTML = '';
+    wordForm.reset();
+    wordForm.classList.remove('hidden');
+}
