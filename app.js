@@ -79,7 +79,7 @@ fetch("./data/data.json")
             for (i in storyPieces) {
                 html += storyPieces[i];
                 if (i < words.length) {
-                html += words[i];
+                html += `<span class="word">${words[i]}</span>`;
                 }
             }
             //creates button to go back to the form
