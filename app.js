@@ -5,7 +5,7 @@ const story = document.querySelector(".story");
 // have the form listen for the submit event
 wordForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    wordForm.classList.add('story');
+    wordForm.classList.add('hidden');
 
     // place the user-entered words into variables with the
     // same name as the form input ids
