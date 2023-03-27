@@ -49,5 +49,5 @@ function resetGame() {
     story.classList.add('story');
     story.innerHTML = '';
     wordForm.reset();
-    wordForm.classList.remove('story');
+    wordForm.classList.remove('hidden');
 }
