@@ -84,7 +84,7 @@ fetch("./data/data.json")
 
 //other functions
 function resetGame() {
-    story.classList.add('story');
+    story.classList.add('hidden');
     story.innerHTML = '';
     wordForm.reset();
     wordForm.classList.remove('hidden');
