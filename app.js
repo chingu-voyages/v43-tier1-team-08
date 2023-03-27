@@ -81,3 +81,11 @@ fetch("./data/data.json")
 
     });  /* end storyButton eventListener */
     }); /* end of fetch */
+
+//other functions
+function resetGame() {
+    story.classList.add('story');
+    story.innerHTML = '';
+    wordForm.reset();
+    wordForm.classList.remove('hidden');
+}
