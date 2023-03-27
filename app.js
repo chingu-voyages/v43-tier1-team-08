@@ -31,46 +31,57 @@ fetch("./data/data.json")
         let storyNumber = Number(e.target.id.slice(13));
         console.log(storyNumber)
 
-    // create form
-    let html = "";
-    // create labels and inputs
-    for (i in data.labels) {
-        html += `
-            <div class="form-control">
-                <label for="${data.inputIds[i]}">${data.labels[i]} : </label>
-                <input type="text" id="${data.inputIds[i]}" name="${data.inputIds[i]}">
-            </div>`
-    }
-    // create reset and submit buttons
-    html += `
-        <div class="buttons">
-            <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
-        </div>`;
+        // run through process for chosen story
+        console.log(arrayOfStoryOjects[storyNumber])
 
-    // add form to DOM
-    form.innerHTML = html;
+        const {title, labels, inputIds, storyPieces} = arrayOfStoryOjects[storyNumber];
+        console.log(title)
 
-    // gather user-entered words,
-    // create story html, and
-    // add story to DOM
-    // inside the submit button handler
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        // gather user-entered words
-        let words = [];
-        for (i in data.inputIds) {
-            words[i] = document.getElementById(data.inputIds[i]).value;
-        }
-        // create story html
+        // add title to DOM
+        storyTitle.innerHTML = title;
+
+        // create form
         let html = "";
-        for (i in data.storyPieces) {
-            html += data.storyPieces[i];
-            if (i < words.length) {
-            html += words[i];
-            }
+        // create labels and inputs
+        for (i in labels) {
+            html += `
+                <div class="form-control">
+                    <label for="${inputIds[i]}">${labels[i]} : </label>
+                    <input type="text" id="${inputIds[i]}" name="${inputIds[i]}">
+                </div>`
         }
-        // set story
-        story.innerHTML = html;
-    });
-}
+        // create reset and submit buttons
+        html += `
+            <div class="buttons">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </div>`;
+
+        // add form to DOM
+        form.innerHTML = html;
+
+        // gather user-entered words,
+        // create story html, and
+        // add story to DOM
+        // inside the submit button handler
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            // gather user-entered words
+            let words = [];
+            for (i in inputIds) {
+                words[i] = document.getElementById(inputIds[i]).value;
+            }
+            // create story html
+            let html = "";
+            for (i in storyPieces) {
+                html += storyPieces[i];
+                if (i < words.length) {
+                html += words[i];
+                }
+            }
+            // set story
+            story.innerHTML = html;
+        }); /* end of form eventListener */
+
+    });  /* end storyButton eventListener */
+    }); /* end of fetch */
