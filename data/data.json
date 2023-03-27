@@ -1,5 +1,5 @@
-{
-    "title": "The Brady Bunch",
+[
+    {"title": "The Brady Bunch",
     "labels": [
         "Adjective",
         "Singular noun",
@@ -8,7 +8,7 @@
         "Plural of the above noun",
         "Plural body part",
         "Color",
-        "Plural Noun"
+        "Plural noun"
     ],
     "inputIds": [
         "adjective",
@@ -31,4 +31,37 @@
         " like their mother, the youngest one had ",
         "."
     ]
-}
+    },
+    
+    {"title": "The Magic Computers",
+    "labels": [
+        "Noun",
+        "Plural noun",
+        "Verb (Present-tense)",
+        "Verb (Present-tense",
+        "Plural body part",
+        "Adjective",
+        "Plural noun"
+    ],
+    "inputIds": [
+        "noun1",
+        "plural-noun1",
+        "verb1",
+        "verb2",
+        "body-part1",
+        "adjective1",
+        "plural-noun-2"
+    ],
+    "storyPieces": [
+        "Today, every student has a computer small enough to fit into his ",
+        ".  He can solve any math problem by simply pushing the computer's little ",
+        ".  Computers can add, multiply, divide, and ",
+        ".  They can also ",
+        "  better than a human. Some computers are ",
+        ". Others have a/an ",
+        " screen that shows all kinds of ",
+        " and ",
+        " figures."
+    ]
+    }
+]
