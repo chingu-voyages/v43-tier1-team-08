@@ -53,5 +53,17 @@ function process(data) {
         }
         // set story
         story.innerHTML = html;
-    });
+        story.classList.remove('hidden');
+
+       //creates button to go back to the form
+          let resetButton = `<br><button id="game-reset" onclick="resetGame()">Play Again</button>`;
+          story.innerHTML += resetButton;
+});
+
+function resetGame() {
+    story.classList.add('hidden');
+    story.innerHTML = '';
+    wordForm.reset();
+    wordForm.classList.remove('hidden');
+
 }
