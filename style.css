@@ -15,6 +15,7 @@ body{
     margin-left: 35%;
 }
 .story-buttons {
+    padding-top: 30px;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -31,6 +32,7 @@ body{
     margin: 30px auto;
     padding: 30px 20px;
     width: 85%;
+    min-height: 100px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
 }
 form {
@@ -84,4 +86,7 @@ button{
 }
 .footer{
     align-self: end;
+}
+.hidden {
+    display: none;
 }
