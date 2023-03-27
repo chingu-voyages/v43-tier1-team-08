@@ -9,6 +9,14 @@ fetch("./data/data.json")
     .then((response) => response.json())
     .then((arrayOfStoryOjects) => {
 
+    // create array of story titles
+    let storyTitles = [];
+    for (i in arrayOfStoryOjects) {
+        let {title} = arrayOfStoryOjects[i];
+        storyTitles.push(title);
+    }
+    console.log(storyTitles);
+    
 
 function process(data) {
     // add title to DOM
