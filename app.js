@@ -38,7 +38,7 @@ wordForm.addEventListener("submit", (e) => {
   
     // place the story into the landing page
     story.innerHTML = storyHTML;
-    story.classList.remove('story');
+    story.classList.remove('hidden');
 
     //creates button to go back to the form
     let resetButton = `<br><button id="game-reset" onclick="resetGame()">Play Again</button>`;
