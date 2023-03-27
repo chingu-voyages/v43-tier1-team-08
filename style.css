@@ -21,6 +21,7 @@ body{
 }
 .story-title1{
     font-size: larger;
+    background-color: rgb(80, 231, 168);
     margin-top: 10%;
     margin-left: 39%;
     background-size: 5px;
