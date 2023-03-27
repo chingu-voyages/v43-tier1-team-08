@@ -18,6 +18,13 @@ fetch("./data/data.json")
     }
     console.log(storyTitles);
     
+    // create story title buttons
+    let storyButtonsHTML = "";
+    for (i in storyTitles) {
+        storyButtonsHTML += `<button type="button" class="story-button" id="story-button-${i}">
+            ${storyTitles[i]}</button>`
+    }
+    storyButtons.innerHTML = storyButtonsHTML;
 
 function process(data) {
     // add title to DOM
