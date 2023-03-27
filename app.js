@@ -90,6 +90,8 @@ fetch("./data/data.json")
 
             // set story
             story.innerHTML = html;
+            story.classList.remove("hidden");
+
         }); /* end of form eventListener */
 
     });  /* end storyButton eventListener */
