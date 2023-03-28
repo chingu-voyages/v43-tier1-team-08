@@ -1,40 +1,69 @@
-// constants to reference html elements used in functions
-const wordForm = document.querySelector("form");
-const story = document.querySelector(".story");
+// DOM element constants
+const storyTitle = document.querySelector(".story-title1");
+const form = document.querySelector("form");
+const story = document.querySelector(".story")
 
-// have the form listen for the submit event
-wordForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+// fetch story data from data.json file and process with process() function
+fetch("./data/data.json")
+  .then((response) => response.json())
+  .then((data) => process(data));
 
-    // place the user-entered words into variables with the
-    // same name as the form input ids
-    let creature = document.getElementById("creature").value;
-    let adjective = document.getElementById("adjective").value;
-    let verb = document.getElementById("verb").value;
-    let feeling = document.getElementById("feeling").value;
-    let clothing = document.getElementById("clothing").value;
-    let sparkly = document.getElementById("sparkly").value;
-    let superpower = document.getElementById("superpower").value;
-    let food = document.getElementById("food").value;
-    let game = document.getElementById("game").value;
-    let animal = document.getElementById("animal").value;
-    let song = document.getElementById("song").value;
-    let room = document.getElementById("room").value;
-    let place = document.getElementById("place").value;
-    let password = document.getElementById("password").value;
-    
-    // create the text of the story to be added to the landing page
-    let storyHTML = `Once there was a strange time where a <span class="word">${creature}</span> took over the world
-    and made us all stay <span class="word">${adjective}</span> at home.  So we 
-    <span class="word">${verb}</span> into our imagination and found out the key to 
-    <span class="word">${feeling}</span> was all about wearing <span class="word">${clothing}</span> 
-    with <span class="word">${sparkly}</span>.  It turned out that this was also the trick to turning 
-    on our <span class="word">${superpower}</span> and getting to do everything you love all at once.  
-    Now, we can eat <span class="word">${food}</span> while playing <span class="word">${game}</span>, 
-    or search for a <span class="word">${animal}</span> while singing <span class="word">${song}</span>.  
-    One time, we even turned the <span class="word">${room}</span> into <span class="word">${place}</span>.  
-    Don’t believe us?  Just say <span class="word">" ${password} "</span> and we’ll show you.`;
-  
-    // place the story into the landing page
-    story.innerHTML = storyHTML;
+function process(data) {
+    // add title to DOM
+    storyTitle.innerHTML = data.title;
+
+    // create form
+    let html = "";
+    // create labels and inputs
+    for (i in data.labels) {
+        html += `
+            <div class="form-control">
+                <label for="${data.inputIds[i]}">${data.labels[i]} : </label>
+                <input type="text" id="${data.inputIds[i]}" name="${data.inputIds[i]}">
+            </div>`
+    }
+    // create reset and submit buttons
+    html += `
+        <div class="buttons">
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </div>`;
+
+    // add form to DOM
+    form.innerHTML = html;
+
+    // gather user-entered words,
+    // create story html, and
+    // add story to DOM
+    // inside the submit button handler
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // gather user-entered words
+        let words = [];
+        for (i in data.inputIds) {
+            words[i] = document.getElementById(data.inputIds[i]).value;
+        }
+        // create story html
+        let html = "";
+        for (i in data.storyPieces) {
+            html += data.storyPieces[i];
+            if (i < words.length) {
+            html += words[i];
+            }
+        }
+        // set story
+        story.innerHTML = html;
+        story.classList.remove('hidden');
+
+       //creates button to go back to the form
+          let resetButton = `<br><button id="game-reset" onclick="resetGame()">Play Again</button>`;
+          story.innerHTML += resetButton;
 });
+
+function resetGame() {
+    story.classList.add('hidden');
+    story.innerHTML = '';
+    wordForm.reset();
+    wordForm.classList.remove('hidden');
+
+}
