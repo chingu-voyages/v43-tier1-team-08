@@ -24,6 +24,10 @@ body{
     font-size: 1.2rem;
     line-height: 2.2rem;
     background-color: #D9D9D9;
+    text-align: center;
+}
+.hidden {
+    display: none;
 }
 .word {
     font-family: Caveat, cursive;
@@ -62,7 +66,7 @@ form {
 }
 .buttons{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     align-items: flex-start;
     gap: 25px;
     width: 443px;
@@ -78,4 +82,7 @@ button{
 }
 .footer{
     align-self: end;
+}
+#game-reset{
+    margin-top: 20px;
 }
