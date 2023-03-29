@@ -1,69 +1,106 @@
 // DOM element constants
+const storyButtons = document.querySelector(".story-buttons");
 const storyTitle = document.querySelector(".story-title1");
+const wordForm = document.querySelector(".word-form");
 const form = document.querySelector("form");
 const story = document.querySelector(".story")
 
-// fetch story data from data.json file and process with process() function
+// fetch story data from data.json file
 fetch("./data/data.json")
-  .then((response) => response.json())
-  .then((data) => process(data));
+    .then((response) => response.json())
+    .then((arrayOfStoryOjects) => {
 
-function process(data) {
-    // add title to DOM
-    storyTitle.innerHTML = data.title;
-
-    // create form
-    let html = "";
-    // create labels and inputs
-    for (i in data.labels) {
-        html += `
-            <div class="form-control">
-                <label for="${data.inputIds[i]}">${data.labels[i]} : </label>
-                <input type="text" id="${data.inputIds[i]}" name="${data.inputIds[i]}">
-            </div>`
+    // create array of story titles
+    let storyTitles = [];
+    for (i in arrayOfStoryOjects) {
+        let {title} = arrayOfStoryOjects[i];
+        storyTitles.push(title);
     }
-    // create reset and submit buttons
-    html += `
-        <div class="buttons">
-            <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
-        </div>`;
+    
+    // create story title buttons
+    let storyButtonsHTML = "";
+    for (i in storyTitles) {
+        storyButtonsHTML += `<button type="button" class="story-button" id="story-button-${i}">
+            ${storyTitles[i]}</button>`
+    }
+    storyButtons.innerHTML = storyButtonsHTML;
 
-    // add form to DOM
-    form.innerHTML = html;
+    // add eventListener to story title button class
+    storyButtons.addEventListener("click", e => {
 
-    // gather user-entered words,
-    // create story html, and
-    // add story to DOM
-    // inside the submit button handler
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        // gather user-entered words
-        let words = [];
-        for (i in data.inputIds) {
-            words[i] = document.getElementById(data.inputIds[i]).value;
-        }
-        // create story html
+        // get number of story chosen
+        let storyNumber = Number(e.target.id.slice(13));
+
+        // run through process for chosen story
+        const {title, labels, inputIds, storyPieces} = arrayOfStoryOjects[storyNumber];
+
+        // add title to DOM
+        storyTitle.innerHTML = title;
+
+        // create form
         let html = "";
-        for (i in data.storyPieces) {
-            html += data.storyPieces[i];
-            if (i < words.length) {
-            html += words[i];
-            }
+        // create labels and inputs
+        for (i in labels) {
+            html += `
+                <div class="form-control">
+                    <label for="${inputIds[i]}">${labels[i]}: </label>
+                    <input type="text" id="${inputIds[i]}" name="${inputIds[i]}">
+                </div>`
         }
-        // set story
-        story.innerHTML = html;
-        story.classList.remove('hidden');
+        // add space if there are an odd number of inputs
+        if (labels.length % 2 == 1) {
+            html += `
+                <div class="form-control"></div>`
+        }
+        // create reset and submit buttons
+        html += `
+            <div class="buttons">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </div>`;
 
-       //creates button to go back to the form
-          let resetButton = `<br><button id="game-reset" onclick="resetGame()">Play Again</button>`;
-          story.innerHTML += resetButton;
-});
+        // add form to DOM
+        form.innerHTML = html;
+        wordForm.classList.remove("hidden");
 
+        // gather user-entered words,
+        // create story html, and
+        // add story to DOM
+        // inside the submit button handler
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            // gather user-entered words
+            let words = [];
+            for (i in inputIds) {
+                words[i] = document.getElementById(inputIds[i]).value;
+            }
+            // create story html
+            let html = "";
+            for (i in storyPieces) {
+                html += storyPieces[i];
+                if (i < words.length) {
+                html += `<span class="word">${words[i]}</span>`;
+                }
+            }
+            //creates button to go back to the form
+            let resetButton = `<br><button id="game-reset" onclick="resetGame()">Play Again</button>`;
+            html += resetButton;
+            // hide form
+            wordForm.classList.add('hidden');
+
+            // set story
+            story.innerHTML = html;
+            story.classList.remove("hidden");
+
+        }); /* end of form eventListener */
+
+    });  /* end storyButton eventListener */
+    }); /* end of fetch */
+
+//other functions
 function resetGame() {
     story.classList.add('hidden');
     story.innerHTML = '';
-    wordForm.reset();
-    wordForm.classList.remove('hidden');
-
+    storyTitle.innerHTML = "";
+    form.reset();
 }

@@ -52,21 +52,21 @@ body{
     width: 50%;
     margin-left: 25%;
 }
+.game-title{
+    margin-left: 35%;
+}
+.story-buttons {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 .story-title1{
     font-size: larger;
+    background-color: rgb(80, 231, 168);
     margin-top: 10%;
     margin-left: 39%;
     background-size: 5px;
-}
-.story {
-    font-size: 1.2rem;
-    line-height: 2.2rem;
-    background-color: #D9D9D9;
-}
-.word {
-    font-family: Caveat, cursive;
-    font-size: 1.8rem;
-    text-decoration: underline;
 }
 .the-team{
     justify-content: center;
@@ -78,7 +78,8 @@ body{
     margin: 30px auto;
     padding: 30px 20px;
     width: 85%;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.50));
+    min-height: 100px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
 }
 form {
     display: flex;
@@ -119,6 +120,19 @@ button{
     border-radius: 15px;
     font-size: 1.2rem;
 }
+.story {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    background-color: #D9D9D9;
+}
+.word {
+    font-family: Caveat, cursive;
+    font-size: 1.8rem;
+    text-decoration: underline;
+}
 .footer{
     align-self: end;
+}
+.hidden {
+    display: none;
 }
