@@ -1,6 +1,6 @@
 // DOM element constants
 const storyButtons = document.querySelector('.story-buttons');
-const storyTitle = document.querySelector('.story-title1');
+const storyTitle = document.querySelector('.story-title');
 const wordForm = document.querySelector('.word-form');
 const form = document.querySelector('form');
 const story = document.querySelector('.story');
@@ -34,7 +34,7 @@ fetch('./data/data.json')
 				arrayOfStoryOjects[storyNumber];
 
 			// add title to DOM
-			storyTitles.innerHTML = `"` + title + `"`;
+			storyTitle.innerHTML = `"` + title + `"`;
 
 			// create form
 			let html = '';
