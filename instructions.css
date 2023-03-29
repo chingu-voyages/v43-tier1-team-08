@@ -1,0 +1,22 @@
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+.instructions-card {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #000;
+	transition: 0.3s;
+	width: 400px;
+	padding: 40px 80px;
+	font-size: 1.4rem;
+}
+
+@media (max-width: 600px) {
+	.instructions-card {
+		width: 200px;
+		padding: 40px 80px;
+		font-size: 1.2rem;
+	}
+}
