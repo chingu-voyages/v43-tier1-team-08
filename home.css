@@ -138,5 +138,6 @@ label {
 	.nav-bar div {
 		grid-column-start: 1;
 		grid-column-end: 5;
+		padding-bottom: 20px;
 	}
 }
