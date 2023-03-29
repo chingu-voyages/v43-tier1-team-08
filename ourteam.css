@@ -1,0 +1,14 @@
+.ourteam-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 20px;
+	height: 400px;
+}
+
+.ourteam-list ul {
+	text-align: center;
+	list-style: none;
+	font-size: 1.4rem;
+}
