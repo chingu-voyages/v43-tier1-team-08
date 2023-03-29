@@ -34,7 +34,7 @@ fetch('./data/data.json')
 				arrayOfStoryOjects[storyNumber];
 
 			// add title to DOM
-			storyTitle.innerHTML = `"` + title + `"`;
+			storyTitles.innerHTML = `"` + title + `"`;
 
 			// create form
 			let html = '';
