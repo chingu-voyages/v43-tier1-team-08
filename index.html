@@ -1,28 +1,45 @@
-<!DOCTYPE html> 
-<html>     
-<link rel="stylesheet" href="home.css">       
-     <head>
-       <title>MAD-LIB Homepage</title>
-       <p class= homepage-logo> MAD☻LIBS </p>
-     </head>
-
-     <body>
-        <div class="flex-menu">
-            <div>
-                <!-- PLAY BUTTON NEEDS JS FUNCTIONALITY TO LEAD TO STORY1 -->
-                <button class="button1" onclick="document.location='second.html'">Play!</button>
-            </div>
-            <div>
-                <button class="button2" onclick="document.location='instructions.html'">Instructions!</button>
-            </div>
-            <div>
-                <button class="button3" onclick="document.location='ourteam.html'">Our Team!</button>
-            </div>
-            <div>
-                <button class="button4" onclick='window.location.href= "https://github.com/chingu-voyages/v43-tier1-team-08"'>Github!</button>
-            </div>
-            
-        </div>
-       
-     </body>      
- </html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="home.css" />
+		<title>Mad Lib Game</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<a href="index.html">
+					<img class="logo" src="/public/madlibs_logo.png" />
+				</a>
+			</div>
+			<div class="flex-menu">
+				<!-- PLAY BUTTON NEEDS JS FUNCTIONALITY TO LEAD TO STORY1 -->
+				<button class="buttons play" onclick="document.location='play.html'">
+					Play
+				</button>
+				<button
+					class="buttons instructions"
+					onclick="document.location='instructions.html'"
+				>
+					Instructions
+				</button>
+				<button
+					class="buttons ourteam"
+					onclick="document.location='ourteam.html'"
+				>
+					Our Team
+				</button>
+				<button
+					class="buttons github"
+					onclick="window.location.href=`https://github.com/chingu-voyages/v43-tier1-team-08`"
+				>
+					Github
+				</button>
+			</div>
+			<footer class="footer">
+				<p>Terms & Conditions</p>
+				<p>© 2023 Made with ❤️ at Chingu</p>
+				<p>Privacy Policy</p>
+			</footer>
+		</div>
+	</body>
+</html>
