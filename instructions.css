@@ -19,8 +19,8 @@
 
 @media (max-width: 600px) {
 	.instructions-card {
-		width: 200px;
-		padding: 40px 80px;
+		width: 350px;
+		padding: 40px 40px;
 		font-size: 1.2rem;
 	}
 }
