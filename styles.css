@@ -8,7 +8,7 @@
 */
 
 * {
-	display: flex-box;
+	box-sizing: border-box;
 	font-family: 'IBM Plex Mono';
 	font-weight: 300;
 	margin: 0;
@@ -37,7 +37,7 @@ h3 {
 	font-size: 1.2rem;
 }
 
-html body {
+body {
 	min-height: 100vh;
 }
 
