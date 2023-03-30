@@ -93,11 +93,11 @@ button {
 
 .input-form {
 	display: grid;
-	// background: #d9d9d9;
+	/* background: #d9d9d9; */
 	grid-template-columns: 1fr 1fr;
 	max-width: 700px;
 	padding: 20px;
-	// filter: drop-shadow(8px 8px 0px #292929);
+	/* filter: drop-shadow(8px 8px 0px #292929); */
 }
 
 .form-control {
