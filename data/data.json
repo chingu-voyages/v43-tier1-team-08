@@ -1,67 +1,69 @@
 [
-    {"title": "The Brady Bunch",
-    "labels": [
-        "Adjective",
-        "Singular noun",
-        "Number",
-        "Adjective",
-        "Plural of the above noun",
-        "Plural body part",
-        "Color",
-        "Plural noun"
-    ],
-    "inputIds": [
-        "adjective",
-        "singular-noun",
-        "number", 
-        "adjective-2", 
-        "plural-noun", 
-        "body-part", 
-        "color", 
-        "plural-noun-2"
-    ],
-    "storyPieces": [
-        "Here's the story of a ",
-        " ", 
-        " who was bringing up ",
-        " very ", 
-        " ", 
-        ".  All of them had ", 
-        " of ", 
-        " like their mother, the youngest one had ",
-        "."
-    ]
-    },
-    
-    {"title": "The Magic Computers",
-    "labels": [
-        "Noun",
-        "Plural noun",
-        "Verb (Present-tense)",
-        "Verb (Present-tense",
-        "Plural body part",
-        "Adjective",
-        "Plural noun"
-    ],
-    "inputIds": [
-        "noun1",
-        "plural-noun1",
-        "verb1",
-        "verb2",
-        "body-part1",
-        "adjective1",
-        "plural-noun-2"
-    ],
-    "storyPieces": [
-        "Today, every student has a computer small enough to fit into his ",
-        ".  He can solve any math problem by simply pushing the computer's little ",
-        ".  Computers can add, multiply, divide, and ",
-        ".  They can also ",
-        "  better than a human. Some computers are ",
-        ". Others have a/an ",
-        " screen that shows all kinds of ",
-        " and ",
-        " figures."
-    ]
-    }
+	{
+		"title": "The Brady Bunch",
+		"labels": [
+			"Adjective",
+			"Singular noun",
+			"Number",
+			"Adjective",
+			"Plural of the above noun",
+			"Plural body part",
+			"Color",
+			"Plural noun"
+		],
+		"inputIds": [
+			"adjective",
+			"singular-noun",
+			"number",
+			"adjective-2",
+			"plural-noun",
+			"body-part",
+			"color",
+			"plural-noun-2"
+		],
+		"storyPieces": [
+			"Here's the story of a ",
+			" ",
+			" who was bringing up ",
+			" very ",
+			" ",
+			".  All of them had ",
+			" of ",
+			" like their mother, the youngest one had ",
+			"."
+		]
+	},
+
+	{
+		"title": "The Magic Computers",
+		"labels": [
+			"Noun",
+			"Plural noun",
+			"Verb (Present-tense)",
+			"Verb (Present-tense",
+			"Plural body part",
+			"Adjective",
+			"Plural noun"
+		],
+		"inputIds": [
+			"noun1",
+			"plural-noun1",
+			"verb1",
+			"verb2",
+			"body-part1",
+			"adjective1",
+			"plural-noun-2"
+		],
+		"storyPieces": [
+			"Today, every student has a computer small enough to fit into his ",
+			".  He can solve any math problem by simply pushing the computer's little ",
+			".  Computers can add, multiply, divide, and ",
+			".  They can also ",
+			"  better than a human. Some computers are ",
+			". Others have a/an ",
+			" screen that shows all kinds of ",
+			" and ",
+			" figures."
+		]
+	}
 ]
