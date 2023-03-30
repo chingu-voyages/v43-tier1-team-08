@@ -1,3 +1,7 @@
+/* 
+* Styling for our team page
+*/
+
 .ourteam-list {
 	display: flex;
 	flex-direction: column;

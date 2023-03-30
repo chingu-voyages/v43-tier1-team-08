@@ -1,3 +1,7 @@
+/* 
+* Styling for reset and submit buttons
+*/
+
 button {
 	width: 200px;
 	padding: 10px 24px;
@@ -10,6 +14,10 @@ button {
 .reset {
 	background: #a5a5a5;
 }
+
+/* 
+* Begin styling for play section
+*/
 
 .game-container {
 	display: grid;
@@ -66,11 +74,16 @@ button {
 }
 
 .story-title {
+	background: red;
 	background: rgb(80, 231, 168);
 	margin: 20px 0px 10px;
 	background-size: 5px;
 	font-weight: 600;
 }
+
+/* 
+* Begin styling for form
+*/
 
 .form-container {
 	display: flex;
@@ -80,11 +93,11 @@ button {
 
 .input-form {
 	display: grid;
-	/* background: #d9d9d9; */
+	// background: #d9d9d9;
 	grid-template-columns: 1fr 1fr;
 	max-width: 700px;
 	padding: 20px;
-	/* filter: drop-shadow(8px 8px 0px #292929); */
+	// filter: drop-shadow(8px 8px 0px #292929);
 }
 
 .form-control {
@@ -135,6 +148,11 @@ button {
 .hidden {
 	display: none;
 }
+
+/* 
+* End styling for game section
+* Begin styling for responsive screens
+*/
 
 @media (max-width: 800px) {
 	.input-form {

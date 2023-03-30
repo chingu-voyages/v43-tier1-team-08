@@ -1,6 +1,11 @@
+// Font imports
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@600&display=swap');
+
+/* 
+* Begin styling for html native elements
+*/
 
 * {
 	display: flex-box;
@@ -48,6 +53,11 @@ input {
 label {
 	font-size: 1.2rem;
 }
+
+/* 
+* End styling for html native element
+* Begin Styling for Home layout & global navigation
+*/
 
 .wrapper {
 	min-height: 100vh;
@@ -124,6 +134,11 @@ label {
 	margin: 40px 20px;
 	font-size: 1rem;
 }
+
+/* 
+* End styling for html static elements
+* Begin styling for responsive design
+*/
 
 @media (max-width: 700px) {
 	.nav-bar {
