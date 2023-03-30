@@ -158,13 +158,25 @@ button {
 	.input-form {
 		display: flex;
 		flex-direction: column;
-		width: 90vw;
+		width: 75vw;
 		padding: 0px;
 	}
 
 	.form-control {
 		grid-template-columns: 2fr 3fr;
-		width: 90vw;
+		width: 75vw;
+	}
+
+	.story-title {
+		font-size: 1.8rem;
+	}
+
+	.form-control input {
+		width: 150px;
+	}
+
+	.form-control label {
+		font-size: 1rem;
 	}
 
 	.story-buttons {
