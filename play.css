@@ -158,11 +158,12 @@ button {
 	.input-form {
 		display: flex;
 		flex-direction: column;
-		width: 300px;
+		width: 350px;
 	}
 
 	.form-control {
 		grid-template-columns: 2fr 3fr;
+		width: 350px;
 	}
 
 	.story-buttons {
