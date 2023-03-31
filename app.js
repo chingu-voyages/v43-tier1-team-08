@@ -26,6 +26,10 @@ fetch('./data/data.json')
 
         // add eventListener to story title button class
         storyButtons.addEventListener('click', (e) => {
+			// hide form and story
+			wordForm.classList.add('hidden');
+			story.classList.add('hidden');
+			
             // get number of story chosen
             let storyNumber = Number(e.target.id.slice(13));
 
