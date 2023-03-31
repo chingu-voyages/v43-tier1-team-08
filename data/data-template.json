@@ -1,0 +1,20 @@
+{
+    "title": "Template",
+    "id": 0,
+    "labels": [
+        "Label one",
+        "Label two",
+        "Capitalize first word"
+    ],
+    "inputIds": [
+        "name-1",
+        "name-2",
+        "snake-case"
+    ],
+    "storyPieces": [
+        "Start of story, ",
+        " second part ",
+        " include spaces and punctuation",
+        " end of story."
+    ]
+}
