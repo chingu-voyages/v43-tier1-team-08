@@ -65,5 +65,52 @@
 			" and ",
 			" figures."
 		]
+	},
+
+	{
+		"title": "The New Developer",
+		"labels": [
+			"A girl's name",
+			"Adjective",
+			"Adjective",
+			"Made up disease name",
+			"Number",
+			"Bigger number",
+			"Programming language",
+			"Animal (plural)",
+			"Verb (present tense)",
+			"Noun (plural)",
+			"Unit of time",
+			"Huge number"],
+		"inputIds": [
+			"name",
+			"adjective1",
+			"adjective2",
+			"disease",
+			"number1",
+			"number2",
+			"programming-language",
+			"animal",
+			"verb",
+			"noun",
+			"time",
+			"number3"
+		],
+		"storyPieces": [
+			"Once upon a time, ",
+			" decided to make a ",
+			" website. Unfortunately, because of a ",
+			" pandemic because of the terrible disease ",
+			", she couldn't go to school. Instead, she had to watch ",
+			" you-tube videos and take ",
+			" Udemy courses just to learn ",
+			".  Her first website was all about ",
+			" that love to ",
+			" and eat ",
+			".  In just a few ",
+			", she'll have ",
+			" followers."
+		]
 	}
+		
 ]
