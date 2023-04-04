@@ -105,12 +105,12 @@ label {
 }
 
 .play:hover {
-	background-color: rgb(231, 178, 80);
+	background-color: rgb(255, 182, 47);
 	color: white;
 }
 
 .instructions:hover {
-	background-color: #74c3dd;
+	background-color: rgb(97, 213, 252);
 	color: white;
 }
 
@@ -120,7 +120,7 @@ label {
 }
 
 .github:hover {
-	background-color: #98e589;
+	background-color: rgb(80, 231, 168);
 	color: white;
 }
 
