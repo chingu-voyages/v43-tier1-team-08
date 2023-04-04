@@ -36,6 +36,8 @@ h3 {
 
 body {
 	min-height: 100vh;
+	background-color: rgb(255, 255, 255);
+	background-image: linear-gradient(rgb(255, 255, 255), 95%, rgb(80, 231, 168));
 }
 
 button {
@@ -89,7 +91,7 @@ label {
 }
 
 .flex-menu {
-	height: 500px;
+	height: 400px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
