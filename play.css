@@ -6,19 +6,27 @@ button {
 	width: 200px;
 	padding: 10px 24px;
 	border: none;
-	background: #328efa;
+	background: rgb(250, 125, 63);
 	border-radius: 10px;
 	color: #fff;
 }
 
 .reset {
-	background: #a5a5a5;
+	background: #000000;
 }
-
+/* 
+Styling for navbar 
+*/
+a:hover {
+	color: rgb(255, 182, 47);
+}
 /* 
 * Begin styling for play section
 */
-
+body{
+	background-color: rgb(255, 255, 255);
+	background-image: linear-gradient(rgb(255, 255, 255), 95%, rgb(255, 182, 47));
+}
 .game-container {
 	display: grid;
 	grid-template-rows: auto 1fr;
@@ -70,15 +78,16 @@ button {
 }
 
 .story-button:hover {
-	text-decoration: underline;
+	color: rgb(250, 125, 63)
 }
 
 .story-title {
 	background: red;
-	background: rgb(80, 231, 168);
+	background: rgb(250, 125, 63);
 	margin: 20px 0px 10px;
 	background-size: 5px;
 	font-weight: 600;
+	border-radius: 10px;
 }
 
 /* 
