@@ -1,13 +1,18 @@
-var Filter = require('bad-words')
-filter = new Filter();
+var Filter = require('bad-words'),
+filter = new Filter()
 
-console.log(filter.clean("Don't be an ash0le"));
+//Putting list of words into the filter
+words = [];
+for (let i= 0; i <= words.length; i++){
+    filter.addWords(words[i]);
+}
 
-//How about we were to create a new list of bad words instead of an API?
-var bad_words_list = ['bitch', 'fuck', 'asshole'];
+//When this function is called, it will use the API 
+//to delete profane words
+function cleanList(list){
+    filter.clean(list)
+    alert('Profane entries has been deleted')
+}
 
-filter.addWords(...bad_words_list)
-
-//but this might be more cleaner especially if we need to compare
-//user data and list items
-filterTwo = new Filter({list:['damn', 'bastard', 'dick']})
+//calls the function
+cleanList(words)
