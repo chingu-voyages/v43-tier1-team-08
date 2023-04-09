@@ -11,7 +11,7 @@ for (let i= 0; i <= words.length; i++){
 //to delete profane words
 function cleanList(list){
     filter.clean(list)
-    alert('Profane entries has been deleted')
+    alert('Profane entries has been deleted. Click on the reset button.')
 }
 
 //calls the function

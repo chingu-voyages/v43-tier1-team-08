@@ -3,6 +3,10 @@ const storyTitle = document.querySelector(".story-title1");
 const form = document.querySelector("form");
 const story = document.querySelector(".story")
 
+//For the bad words filter
+var Filter = require('bad-words'),
+filter = new Filter()
+
 // JSON object with the story title, an array holding the labels, an array holding the 
 // ids, and an array holding the story pieces
 let json = '{"title": "The Brady Bunch","labels": ["Adjective","Singular noun","Number","Adjective","Plural of the above noun","Plural body part","Color","Plural Noun"],"inputIDs": ["adjective","singular-noun","number", "adjective-2", "plural-noun", "body-part", "color", "plural-noun-2"],"storyPieces": ["Here\'s the story of a "," ", " who was bringing up "," very ", " ", ".  All of them had ", " of ", " like their mother, the youngest one had ","."]}';
@@ -53,6 +57,15 @@ form.addEventListener("submit", (e) => {
         words[i] = document.getElementById(ids[i]).value;
     }
 
+    //Words are entered into the bad words filter
+    for (let i= 0; i <= words.length; i++){
+        filter.addWords(words[i]);
+    }
+
+    //Replaces profane words with asterisks (*)
+        filter.clean(list)
+        alert('Profane entries has been deleted. Click on the reset button to try again.')
+    
     // create story
     for (i in storyPieces) {
         storyHTML += storyPieces[i];
