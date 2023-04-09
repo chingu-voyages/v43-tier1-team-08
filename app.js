@@ -26,6 +26,12 @@ fetch('./data/data.json')
         for (i in arrayOfStoryOjects) {
             let { title } = arrayOfStoryOjects[i];
             storyTitles.push(title);
+
+//For the bad words filter
+var Filter = require('bad-words'),
+filter = new Filter()
+
+
         }
 >>>>>>> 1263b8a6a2ce65178c04c93175376a14af5c3a80
 
