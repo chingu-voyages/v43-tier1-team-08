@@ -1,0 +1,199 @@
+/* 
+* Styling for reset and submit buttons
+*/
+
+button {
+	width: 200px;
+	padding: 10px 24px;
+	border: none;
+	background: rgb(250, 125, 63);
+	border-radius: 10px;
+	color: #fff;
+}
+
+.reset {
+	background: #000000;
+}
+/* 
+Styling for navbar 
+*/
+a:hover {
+	color: rgb(255, 182, 47);
+}
+/* 
+* Begin styling for play section
+*/
+body{
+	background-color: rgb(255, 255, 255);
+	background-image: linear-gradient(rgb(255, 255, 255), 95%, rgb(255, 182, 47));
+}
+.game-container {
+	display: grid;
+	grid-template-rows: auto 1fr;
+}
+
+.info-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.entry-instructions {
+	display: flex;
+	text-align: center;
+	padding: 20px 40px 0px;
+	align-items: center;
+	flex-direction: column;
+	max-width: 800px;
+}
+
+.story {
+	padding: 20px 30px;
+	max-width: 700px;
+}
+
+.result {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+	align-items: center;
+}
+
+.story-buttons {
+	display: flex;
+	gap: 20px;
+}
+
+.story-button {
+	background: none;
+	color: #000;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: 1.2rem;
+	cursor: pointer;
+	outline: inherit;
+	width: 250px;
+}
+
+.story-button:hover {
+	color: rgb(250, 125, 63)
+}
+
+.story-title {
+	background: red;
+	background: rgb(250, 125, 63);
+	margin: 20px 0px 10px;
+	background-size: 5px;
+	font-weight: 600;
+	border-radius: 10px;
+}
+
+/* 
+* Begin styling for form
+*/
+
+.form-container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.input-form {
+	display: grid;
+	/* background: #d9d9d9; */
+	grid-template-columns: 1fr 1fr;
+	max-width: 700px;
+	padding: 20px;
+	/* filter: drop-shadow(8px 8px 0px #292929); */
+}
+
+.form-control {
+	display: grid;
+	padding: 5px 10px;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	gap: 20px;
+	padding: 40px 0px;
+}
+
+.form-control input {
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding: 4px;
+	background: #fbfbfb;
+	border: 1px solid black;
+}
+
+.story-container {
+	display: flex;
+	align-items: center;
+	padding: 0px 40px;
+}
+
+.button-play-again {
+	text-align: center;
+}
+
+.story-final {
+	font-size: 1.4rem;
+}
+
+.word {
+	font-size: 1.6rem;
+	color: #de32fa;
+	text-decoration: underline;
+}
+
+.hidden {
+	display: none;
+}
+
+/* 
+* End styling for game section
+* Begin styling for responsive screens
+*/
+
+@media (max-width: 800px) {
+	.input-form {
+		display: flex;
+		flex-direction: column;
+		width: 75vw;
+		padding: 0px;
+	}
+
+	.form-control {
+		grid-template-columns: 2fr 3fr;
+		width: 75vw;
+	}
+
+	.story-title {
+		font-size: 1.8rem;
+	}
+
+	.form-control input {
+		width: 150px;
+	}
+
+	.form-control label {
+		font-size: 1rem;
+	}
+
+	.story-buttons {
+		flex-direction: column;
+	}
+
+	.result {
+		display: flex;
+		flex-direction: column;
+	}
+}

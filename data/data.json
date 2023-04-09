@@ -1,0 +1,224 @@
+[
+	{
+		"title": "The Brady Bunch",
+		"labels": [
+			"Adjective",
+			"Singular noun",
+			"Number",
+			"Adjective",
+			"Plural of the above noun",
+			"Plural body part",
+			"Color",
+			"Plural noun"
+		],
+		"inputIds": [
+			"adjective",
+			"singular-noun",
+			"number",
+			"adjective-2",
+			"plural-noun",
+			"body-part",
+			"color",
+			"plural-noun-2"
+		],
+		"storyPieces": [
+			"Here's the story of a ",
+			" ",
+			" who was bringing up ",
+			" very ",
+			" ",
+			".  All of them had ",
+			" of ",
+			" like their mother, the youngest one had ",
+			"."
+		]
+	},
+
+	{
+		"title": "The Magic Computers",
+		"labels": [
+			"Noun",
+			"Plural noun",
+			"Verb (Present-tense)",
+			"Verb (Present-tense",
+			"Plural body part",
+			"Adjective",
+			"Plural noun"
+		],
+		"inputIds": [
+			"noun1",
+			"plural-noun1",
+			"verb1",
+			"verb2",
+			"body-part1",
+			"adjective1",
+			"plural-noun-2"
+		],
+		"storyPieces": [
+			"Today, every student has a computer small enough to fit into his ",
+			".  He can solve any math problem by simply pushing the computer's little ",
+			".  Computers can add, multiply, divide, and ",
+			".  They can also ",
+			"  better than a human. Some computers are ",
+			". Others have a/an ",
+			" screen that shows all kinds of ",
+			" and ",
+			" figures."
+		]
+	},
+
+	{
+		"title": "The New Developer",
+		"labels": [
+			"A girl's name",
+			"Adjective",
+			"Adjective (negative)",
+			"Made up disease name",
+			"Number",
+			"Bigger number",
+			"Programming language",
+			"Animal (plural)",
+			"Verb (present tense)",
+			"Noun (plural)",
+			"Unit of time (plural)",
+			"Huge number"],
+		"inputIds": [
+			"name",
+			"adjective1",
+			"adjective2",
+			"disease",
+			"number1",
+			"number2",
+			"programming-language",
+			"animal",
+			"verb",
+			"noun",
+			"time",
+			"number3"
+		],
+		"storyPieces": [
+			"Once upon a time, ",
+			" decided to make a ",
+			" website. Unfortunately, because of a ",
+			" pandemic because of the terrible disease ",
+			", she couldn't go to school. Instead, she had to watch ",
+			" you-tube videos and take ",
+			" Udemy courses just to learn ",
+			".  Her first website was all about ",
+			" that love to ",
+			" and eat ",
+			".  In just a few ",
+			", she'll have ",
+			" followers."
+		]
+	},
+
+	{
+		"title": "Animal Friends",
+		"labels": [
+			"Animal",
+			"Animal",
+			"Animal",
+			"Adjective",
+			"Profession",
+			"Number",
+			"Noun (plural)",
+			"Piece of furniture",
+			"Number",
+			"Noun (plural)",
+			"Piece of furniture",
+			"Adjective",
+			"Profession",
+			"Adjective",
+			"Noun (plural)"
+		],
+		"inputIds": [
+			"animal-1",
+			"animal-2",
+			"animal-3",
+			"adjective-1",
+			"profession-1",
+			"number-1",
+			"noun-1",
+			"furniture-1",
+			"number-2",
+			"noun-2",
+			"furniture-2",
+			"adjective-2",
+			"profession-2",
+			"adjective-3",
+			"noun-3"
+		],
+		"storyPieces": [
+			"Just last week, a ",
+			", a ",
+			", and a ",
+			" were having a conversation.  They were very concerned that a ",
+			" ",
+			" was planning a sneak attack on them, so they decided to lay a trap!  They put ",
+			" ",
+			" way up high above their ",
+			" and ",
+			" ",
+			" way down low below their ",
+			".  Fortunately, they had no cause to fear an attack.  Instead, a ",
+			" ",
+			" brought them a ",
+			" gift of ",
+			"."
+		]
+	},
+
+	{
+		"title": "Far Away Man",
+		"labels": [
+			"City",
+			"Adjective",
+			"Adjective",
+			"Profession",
+			"Number",
+			"Verb (past-tense)",
+			"Adjective",
+			"Noun (plural)",
+			"Noun (singular)",
+			"Number",
+			"Noun (plural)",
+			"Animal",
+			"Food",
+			"Animal sound (adding -ing)"
+		],
+		"inputIds": [
+			"city",
+			"adjective-1",
+			"adjective-2",
+			"profession",
+			"number-1",
+			"verb",
+			"adjective-3",
+			"noun-1",
+			"noun-2",
+			"number-2",
+			"noun-3",
+			"animal",
+			"food",
+			"sound"
+		],
+		"storyPieces": [
+			"A very long time ago, in the very far away city ",
+			", a ",
+			", ",
+			" man lived in relative peace.  He was the best ",
+			" that could be found within ",
+			" miles.  He could be seen carrying his tools as he ",
+			" his way to work.  His tools of the trade included ",
+			" ",
+			", a ",
+			", and ",
+			" ",
+			".  His ",
+			" was always by his side needing to be given treats of ",
+			"  to keep it from ",
+			"."
+		]
+	}
+]

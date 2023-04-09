@@ -1,0 +1,24 @@
+/* 
+* Styling for our team page
+*/
+body{
+	background-color: rgb(255, 255, 255);
+	background-image: linear-gradient(rgb(255, 255, 255), 95%, rgb(152, 0, 255));
+}
+a:hover{
+	color: rgb(152, 0, 255);
+}
+.ourteam-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 20px;
+	height: 400px;
+}
+
+.ourteam-list ul {
+	text-align: center;
+	list-style: none;
+	font-size: 1.4rem;
+}

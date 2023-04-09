@@ -1,0 +1,32 @@
+.container {
+	display: flex;
+	justify-content: center;
+}
+body {
+	background-color: rgb(255, 255, 255);
+	background-image: linear-gradient(rgb(255, 255, 255), 95%, rgb(97, 213, 252));
+  }
+.instructions-card {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #000;
+	transition: 0.3s;
+	width: 50rem;
+	max-height: 30rem;
+	padding: 40px 40px;
+	font-size: 1.4rem;
+}
+a:hover{
+	color: rgb(97, 213, 252);
+}
+/* 
+* Styling for responsive screens
+*/
+
+@media (max-width: 600px) {
+	.instructions-card {
+		width: 350px;
+		padding: 40px 40px;
+		font-size: 1.2rem;
+	}
+}
