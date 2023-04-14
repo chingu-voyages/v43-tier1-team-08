@@ -5,18 +5,10 @@ const wordForm = document.querySelector('.word-form');
 const form = document.querySelector('form');
 const story = document.querySelector('.story');
 
-<<<<<<< HEAD
 //For the bad words filter
 var Filter = require('bad-words'),
 filter = new Filter()
 
-// JSON object with the story title, an array holding the labels, an array holding the 
-// ids, and an array holding the story pieces
-let json = '{"title": "The Brady Bunch","labels": ["Adjective","Singular noun","Number","Adjective","Plural of the above noun","Plural body part","Color","Plural Noun"],"inputIDs": ["adjective","singular-noun","number", "adjective-2", "plural-noun", "body-part", "color", "plural-noun-2"],"storyPieces": ["Here\'s the story of a "," ", " who was bringing up "," very ", " ", ".  All of them had ", " of ", " like their mother, the youngest one had ","."]}';
-
-// convert json object into javascript object
-let parsed = JSON.parse(json);
-=======
 // fetch story data from data.json file
 fetch('./data/data.json')
     .then((response) => response.json())
@@ -26,15 +18,7 @@ fetch('./data/data.json')
         for (i in arrayOfStoryOjects) {
             let { title } = arrayOfStoryOjects[i];
             storyTitles.push(title);
-
-//For the bad words filter
-var Filter = require('bad-words'),
-filter = new Filter()
-
-
         }
->>>>>>> 1263b8a6a2ce65178c04c93175376a14af5c3a80
-
         // create story title buttons
         let storyButtonsHTML = '';
         for (i in storyTitles) {
@@ -96,6 +80,16 @@ filter = new Filter()
                 for (i in inputIds) {
                     words[i] = document.getElementById(inputIds[i]).value;
                 }
+
+                //Words are entered into the bad words filter
+                for (let i= 0; i <= words.length; i++){
+                    filter.addWords(words[i]);
+                }
+
+                //Replaces profane words with asterisks (*)
+                    filter.clean(list)
+                    alert('Profane entries has been deleted. Click on the reset button to try again.')
+            
                 // create story html
                 let html =
                     '<div class="result"><img src="/public/3.png" width="100" height="100"/> <div class="story-final">';
@@ -116,31 +110,13 @@ filter = new Filter()
                 // hide form
                 wordForm.classList.add('hidden');
 
-<<<<<<< HEAD
-    //Words are entered into the bad words filter
-    for (let i= 0; i <= words.length; i++){
-        filter.addWords(words[i]);
-    }
-
-    //Replaces profane words with asterisks (*)
-        filter.clean(list)
-        alert('Profane entries has been deleted. Click on the reset button to try again.')
-    
-    // create story
-    for (i in storyPieces) {
-        storyHTML += storyPieces[i];
-        if (i < words.length) {
-        storyHTML += words[i];
-        }
-    }
-=======
                 // set story
                 story.innerHTML = html;
                 story.classList.remove('hidden');
             }); /* end of form eventListener */
         }); /* end storyButton eventListener */
     }); /* end of fetch */
->>>>>>> 1263b8a6a2ce65178c04c93175376a14af5c3a80
+
 
 //other functions
 function resetGame() {
