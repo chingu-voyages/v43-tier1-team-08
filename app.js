@@ -5,7 +5,6 @@ const wordForm = document.querySelector('.word-form');
 const form = document.querySelector('form');
 const story = document.querySelector('.story');
 
-<<<<<<< HEAD
 //For the bad words filter
 var Filter = require('bad-words'),
 filter = new Filter()
@@ -16,7 +15,7 @@ let json = '{"title": "The Brady Bunch","labels": ["Adjective","Singular noun","
 
 // convert json object into javascript object
 let parsed = JSON.parse(json);
-=======
+
 // fetch story data from data.json file
 fetch('./data/data.json')
     .then((response) => response.json())
@@ -27,7 +26,6 @@ fetch('./data/data.json')
             let { title } = arrayOfStoryOjects[i];
             storyTitles.push(title);
         }
->>>>>>> 1263b8a6a2ce65178c04c93175376a14af5c3a80
 
         // create story title buttons
         let storyButtonsHTML = '';
@@ -66,7 +64,7 @@ fetch('./data/data.json')
             // add space if there are an odd number of inputs
             if (labels.length % 2 == 1) {
                 html += `
-			          <div class="form-control"></div>`;
+			        <div class="form-control"></div>`;
             }
             // create reset and submit buttons
             html += `
@@ -110,14 +108,12 @@ fetch('./data/data.json')
                 // hide form
                 wordForm.classList.add('hidden');
 
-<<<<<<< HEAD
-    //Words are entered into the bad words filter
-    for (let i= 0; i <= words.length; i++){
-        filter.addWords(words[i]);
-    }
-
     //Replaces profane words with asterisks (*)
-        filter.clean(list)
+        for(w in words){
+            if (filter.isProfane(word[w])){
+                filter.replaceWord(word[w])
+            }
+        }
         alert('Profane entries has been deleted. Click on the reset button to try again.')
     
     // create story
@@ -127,14 +123,13 @@ fetch('./data/data.json')
         storyHTML += words[i];
         }
     }
-=======
+
                 // set story
                 story.innerHTML = html;
                 story.classList.remove('hidden');
             }); /* end of form eventListener */
         }); /* end storyButton eventListener */
     }); /* end of fetch */
->>>>>>> 1263b8a6a2ce65178c04c93175376a14af5c3a80
 
 //other functions
 function resetGame() {
