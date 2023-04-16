@@ -88,6 +88,16 @@ fetch('./data/data.json')
                 for (i in inputIds) {
                     words[i] = document.getElementById(inputIds[i]).value;
                 }
+
+                //Words are entered into the bad words filter
+                for (let i= 0; i <= words.length; i++){
+                    filter.addWords(words[i]);
+                }
+
+                //Replaces profane words with asterisks (*)
+                    filter.clean(list)
+                    alert('Profane entries has been deleted. Click on the reset button to try again.')
+            
                 // create story html
                 let html =
                     '<div class="result"><img src="/public/3.png" width="100" height="100"/> <div class="story-final">';
