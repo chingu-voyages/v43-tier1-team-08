@@ -81,7 +81,7 @@ fetch('./data/data.json')
                 // filter words with Bad Words API
                 // prepare information needed to call the API
                 const header = new Headers();  // create new empty http request header
-                header.append("apikey", apiKey); // add the apiKey from config file to header
+                header.append("apikey", "2nsFQUEWrohGWtLd2aNMIYiabo8HlEo3"); // add the apiKey from config file to header
                 let wordsAsString = words.join(); // convert words array to a string
                 let requestOptions = {
                   method: 'POST',
