@@ -97,7 +97,7 @@ fetch('./data/data.json')
                     
                     // create story html
                     let html =
-                        '<div class="result"><img src="/public/3.png" width="100" height="100"/> <div class="story-final">';
+                        '<div class="result"><img src="public/3.png" width="100" height="100"/> <div class="story-final">';
                     for (i in storyPieces) {
                         html += storyPieces[i];
                         if (i < words.length) {
