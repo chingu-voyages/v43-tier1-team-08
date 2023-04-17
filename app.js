@@ -67,6 +67,7 @@ fetch('./data/data.json')
             wordForm.classList.remove('hidden');
 
             // gather user-entered words,
+            // filter the words,
             // create story html, and
             // add story to DOM
             // inside the submit button handler
@@ -77,29 +78,47 @@ fetch('./data/data.json')
                 for (i in inputIds) {
                     words[i] = document.getElementById(inputIds[i]).value;
                 }
-                // create story html
-                let html =
-                    '<div class="result"><img src="/public/3.png" width="100" height="100"/> <div class="story-final">';
-                for (i in storyPieces) {
-                    html += storyPieces[i];
-                    if (i < words.length) {
-                        html += `<span class="word">${words[i]}</span>`;
+                // filter words with Bad Words API
+                // prepare information needed to call the API
+                const header = new Headers();  // create new empty http request header
+                header.append("apikey", apiKey); // add the apiKey from config file to header
+                let wordsAsString = words.join(); // convert words array to a string
+                let requestOptions = {
+                  method: 'POST',
+                  redirect: 'follow',
+                  headers: header, // the header created above
+                  body: wordsAsString // the string of our user-entered words
+                };
+                // send our string of user-entered words to API which replaces profanity with asterisks
+                fetch("https://api.apilayer.com/bad_words", requestOptions)
+                  .then(response => response.json())
+                  .then(result => {
+                    words = result.censored_content.split(","); // convert our filtered string back to an array
+                    
+                    // create story html
+                    let html =
+                        '<div class="result"><img src="/public/3.png" width="100" height="100"/> <div class="story-final">';
+                    for (i in storyPieces) {
+                        html += storyPieces[i];
+                        if (i < words.length) {
+                            html += `<span class="word">${words[i]}</span>`;
+                        }
                     }
-                }
-                //creates button to go back to the form
-                let resetButton = `
-						</div></div>
-						<div class="button-play-again">
-						<br><button id="game-reset" onclick="resetGame()">Play Again</button>
-						</div>
-						`;
-                html += resetButton;
-                // hide form
-                wordForm.classList.add('hidden');
+                    //creates button to go back to the form
+                    let resetButton = `
+                            </div></div>
+                            <div class="button-play-again">
+                            <br><button id="game-reset" onclick="resetGame()">Play Again</button>
+                            </div>
+                            `;
+                    html += resetButton;
+                    // hide form
+                    wordForm.classList.add('hidden');
 
-                // set story
-                story.innerHTML = html;
-                story.classList.remove('hidden');
+                    // set story
+                    story.innerHTML = html;
+                    story.classList.remove('hidden');
+                }); /* end of Bad Words fetch */
             }); /* end of form eventListener */
         }); /* end storyButton eventListener */
     }); /* end of fetch */
